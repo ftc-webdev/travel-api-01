@@ -6,8 +6,8 @@ import { Input } from './Form'
 const AirportData = () => {
 
   const [airportData, setAirportData ] = useState(null)
-  const [airportCode ] = useState("")
-
+  // const [airportCode ] = useState()
+  let airportCode 
 
   const getAirportData = async (airportCode) => {
     // go off and fetch the data
@@ -29,6 +29,7 @@ const AirportData = () => {
         label="Enter Airport Code" 
         value={airportCode} 
         onEnter={onAirportCodeEnter} 
+        onChange={(e) => e.target.value = e.target.value.toUpperCase()}
         placeholder="Enter an airport code"
       />
       {airportData && <Airport airport={airportData} />} 

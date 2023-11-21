@@ -6,7 +6,8 @@ import Airline from './Airline'
 const AirlineData = () => {
   
   const [airlineData, setAirlineData ] = useState(null)
-  const [airlineCode ] = useState("")
+  // const [airlineCode ] = useState()
+  let airlineCode
 
   const getAirlineData = async (airlineCode) => {
     // go off and fetch the data
@@ -28,6 +29,7 @@ const AirlineData = () => {
         label="Enter Airline Code" 
         value={airlineCode} 
         onEnter={onAirlineCodeEnter} 
+        onChange={(e) => e.target.value = e.target.value.toUpperCase()}
         placeholder="Enter an airline code"
       />
       {airlineData && <Airline airline={airlineData} />}

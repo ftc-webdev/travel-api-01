@@ -29,7 +29,13 @@ const Input = ({value, label, onEnter, ...options}) => {
   if(!options) options = {}
 
   const onKeyDown = (e) => {
+    // console.log("onKeyDown", e)
     if(e.keyCode === 13 && onEnter ) onEnter(e)
+  }
+
+  const onChange = (e) => {
+    // console.log("Form.Input.onChange", options.onChange)
+    if(options.onChange) options.onChange(e)
   }
   
   return (
@@ -38,8 +44,8 @@ const Input = ({value, label, onEnter, ...options}) => {
         <input 
           type="text" 
           value={value}
-          onChange={(e) => options.onChange && options.onChange(e)}
-          onKeyDown={(e) => onKeyDown(e)}
+          onChange={onChange}
+          onKeyDown={onKeyDown}
           disabled={options.disabled}
           {...options} 
         />

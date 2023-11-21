@@ -18,7 +18,7 @@ const Airport = ({airport}) => {
       <Field label="IATA Code:" data={airport.iataCode} />
       <Field label="ICAO Code:" data={airport.icaoCode} />
       <Field label="Name:" data={airport.name} />
-      <Field label="Country:" data={airport.alpha3countryCode} />
+      <Field label="Country:" data={airport.alpha2countryCode} />
       <Field label="Lat/Long:" data={airport.latitude + "/" + airport.longitude} />
     </div>
   )

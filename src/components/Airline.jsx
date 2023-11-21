@@ -1,6 +1,10 @@
 import Field from './Field'
+// import { sampleSearchCountryCode } from '../data'
 
 const Airline = ({ airline }) => {
+
+  // const country = await sampleSearchCountryCode(airline.alpha3countryCode)
+  
   return (
     <div>
       <h3>Airline Data</h3>
