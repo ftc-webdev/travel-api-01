@@ -14,12 +14,15 @@ import Field from './Field'
 const Airport = ({airport}) => {
   console.log("Airport", airport)
   return (
-    <div className="airport">
-      <Field label="IATA Code:" data={airport.iataCode} />
-      <Field label="ICAO Code:" data={airport.icaoCode} />
-      <Field label="Name:" data={airport.name} />
-      <Field label="Country:" data={airport.alpha2countryCode} />
-      <Field label="Lat/Long:" data={airport.latitude + "/" + airport.longitude} />
+    <div className="container">
+      <div className="airport">
+        <h3>Airport Data</h3>
+        <Field label="IATA Code:" data={airport.iataCode} />
+        <Field label="ICAO Code:" data={airport.icaoCode} />
+        <Field label="Name:" data={airport.name} />
+        <Field label="Country:" data={airport.alpha2countryCode} />
+        <Field label="Lat/Long:" data={airport.latitude + "/" + airport.longitude} />
+      </div>
     </div>
   )
 }

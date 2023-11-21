@@ -78,12 +78,20 @@ ul {
   cursor: pointer;
 }
 
-.airline {
+.field .label {
+  display: inline-block;
+  width: 100px;
+  margin: 0px;
+}
+
+.airline, .airport {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  display: block;
+  text-align:left;
 }
 
 .airline.selected {
@@ -94,6 +102,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.panel {
+  display: block;
+  text-align: left;
 }
 
 .form {
