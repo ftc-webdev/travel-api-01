@@ -3,6 +3,7 @@ import './App.css';
 import AirlineData from './components/AirlineData'
 import AirportData from './components/AirportData'
 import { geoLocateIP } from './data'
+import models from "./models" // pick up the index.js frpom ./models folder
 
 const App = () => {
   const [ geoData, setGeoData ] = useState()

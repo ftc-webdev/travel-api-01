@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { sampleSearchAirlineCode } from '../data'
+// import { sampleSearchAirlineCode } from '../data'
 import { Input } from './Form'
 import Airline from './Airline'
+import models from '../models'
 
 const AirlineData = () => {
   
@@ -11,7 +12,9 @@ const AirlineData = () => {
 
   const getAirlineData = async (airlineCode) => {
     // go off and fetch the data
-    const data = await sampleSearchAirlineCode(airlineCode)
+    // const data = await sampleSearchAirlineCode(airlineCode)
+    const data = await models.airlines.get(airlineCode)
+
     setAirlineData(data)
   }
 

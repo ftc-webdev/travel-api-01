@@ -1,20 +1,23 @@
 import { useState, useEffect } from 'react'
 import Field from './Field'
-import { sampleSearchCountryCode } from '../data'
+import models from '../models'
 
 const Airline = ({ airline }) => {
-
+  
   const [country, setCountry ] = useState()
-  // const country = await sampleSearchCountryCode(airline.alpha3countryCode)
+
   useEffect(() => {
-    
-    sampleSearchCountryCode(airline.alpha3countryCode)
+
+    // data.country.get(airline.alpha3countryCode)
+    // sampleSearchCountryCode(airline.alpha3countryCode)
+    models.countries.get(airline.alpha3countryCode)
     .then((data) => {
       console.log("then", data)
       setCountry(data)
     })
 
-  }, [airline])
+
+  }, [ airline ])
   
   return (
     <div className="container">
